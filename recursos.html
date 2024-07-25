@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursos Educacionais</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Recursos Educacionais</h1>
+    <ul>
+        {% for recurso in recursos %}
+            <li>{{ recurso.nome }} - {{ recurso.descricao }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>

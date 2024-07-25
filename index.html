@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Plataforma Escolar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bem-vindo à Plataforma Escolar</h1>
+    <nav>
+        <a href="{{ url_for('recursos') }}">Recursos Educacionais</a>
+        <a href="{{ url_for('orientacao') }}">Orientação Profissional</a>
+        <a href="{{ url_for('comunicacao') }}">Comunicação Escola-Pais</a>
+    </nav>
+    <p>Escolha uma das opções acima para acessar as funcionalidades.</p>
+</body>
+</html>

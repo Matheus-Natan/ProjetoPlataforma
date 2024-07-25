@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Orientação Profissional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Orientação Profissional</h1>
+    <ul>
+        {% for orientacao in orientacoes %}
+            <li>{{ orientacao.carreira }} - {{ orientacao.descricao }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>

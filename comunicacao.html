@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Comunicação Escola-Pais</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Comunicação Escola-Pais</h1>
+    <form method="post">
+        <textarea name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem..."></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <ul>
+        {% for comunicacao in comunicacoes %}
+            <li>{{ comunicacao.mensagem }} - {{ comunicacao.data }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>
